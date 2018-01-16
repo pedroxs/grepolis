@@ -5,6 +5,8 @@ pipeline {
       parallel {
         stage('passo a1') {
           steps {
+            sh "BUILD_NUMBER: ${env.BUILD_NUMBER}"
+            sh "BUILD_TAG: ${env.BUILD_TAG}"
             sh 'echo hola do passo a1'
           }
         }
